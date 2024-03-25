@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Paciente {
 
-
+    private Long id;
     private String rut;
     private String nombre;
     private String apellido;
@@ -16,7 +16,8 @@ public class Paciente {
     
     }
 
-    public Paciente(String rut, String nombre, String apellido, String email) {
+    public Paciente(Long id, String rut, String nombre, String apellido, String email) {
+        this.id = id;
         this.rut = rut;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -68,5 +69,8 @@ public class Paciente {
         this.atenciones.add(atencion);
     }
 
+    public Long getId() {
+        return this.id;
+    }
 
 }
